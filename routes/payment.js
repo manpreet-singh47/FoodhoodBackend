@@ -33,8 +33,8 @@ router.post("/create-checkout-session", async (req, res) => {
           quantity: item.qty,
         };
       }),
-      success_url: "http://localhost:3000/success",
-      cancel_url: "http://localhost:3000/cancel",
+      success_url: "https://foodhoodbackend.onrender.com/success",
+      cancel_url: "https://foodhoodbackend.onrender.com/cancel",
     };
     const session = await stripe.checkout.sessions.create(params);
     console.log(session);
